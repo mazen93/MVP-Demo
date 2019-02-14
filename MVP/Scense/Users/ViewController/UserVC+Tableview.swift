@@ -23,7 +23,7 @@ extension UserVC:UITableViewDelegate,UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.getUsersCount()
+        return presenter?.getUsersCount() ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,12 +31,12 @@ extension UserVC:UITableViewDelegate,UITableViewDataSource{
         
         let cell=table.dequeueReusableCell(withIdentifier: "UserVCCell", for: indexPath) as! UserVCCell
         
-        presenter.configration(cell: cell, for: indexPath.row)
+        presenter?.configration(cell: cell, for: indexPath.row)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.didSelectRow(index: indexPath.row)
+        presenter?.didSelectRow(index: indexPath.row)
     }
     
     

@@ -12,13 +12,13 @@ import Foundation
 
 protocol UsersView: class {
     
-    
+    var presenter:UserVCPresenter?{get set}
     func showIndicator()
     func hideIndicator()
     func fetchingDataSuccess()
     func showError(error:String)
-    
-    func navigateToUserDetails(user:user)
+    // befor router
+    //func navigateToUserDetails(user:user)
 }
 
 
@@ -35,14 +35,17 @@ protocol UserCellView {
 class UserVCPresenter {
 
     private weak var view:UsersView?
-    private let interactor=UsersInteractor()
+    private let interactor:UsersInteractor
+    private let router:UserVCRouter
     private var users=[user]()
     
     
     // assign view to presenter
     // dependise injection -> all prop is private
-    init(view:UsersView) {
+    init(view:UsersView?,interactor:UsersInteractor,router:UserVCRouter) {
         self.view=view
+        self.interactor=interactor
+        self.router=router
     }
     
     
@@ -93,6 +96,10 @@ class UserVCPresenter {
     
     func didSelectRow(index:Int)  {
           let user=users[index]
-        view?.navigateToUserDetails(user: user)
+        router.navigateToUserDetails(view: view, user: user)
+        
+        
+        // before router
+       // view?.navigateToUserDetails(user: user)
     }
 }

@@ -14,7 +14,7 @@ class UserVC: UIViewController {
     @IBOutlet weak var table: UITableView!
     
     
-    var presenter:UserVCPresenter!
+    var presenter:UserVCPresenter?
     
    
     override func viewDidLoad() {
@@ -23,8 +23,8 @@ class UserVC: UIViewController {
         
         
         SetUpTableView()
-        presenter=UserVCPresenter(view: self)
-        presenter.viewDidLoad()
+      //  presenter=UserVCPresenter(view: self)
+        presenter?.viewDidLoad()
     }
 
 

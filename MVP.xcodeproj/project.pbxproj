@@ -20,6 +20,11 @@
 		04102A1E2212D5F4006DF545 /* UsersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04102A1D2212D5F4006DF545 /* UsersInteractor.swift */; };
 		04102A202212D818006DF545 /* UserVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04102A1F2212D818006DF545 /* UserVCPresenter.swift */; };
 		04102A222212DA05006DF545 /* UserVC + PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04102A212212DA05006DF545 /* UserVC + PresenterDelegate.swift */; };
+		043ABE6D2215606A00F93525 /* UserVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ABE6C2215606A00F93525 /* UserVCRouter.swift */; };
+		043ABE7222156CF400F93525 /* UserDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ABE7122156CF400F93525 /* UserDetailsVC.swift */; };
+		043ABE76221570FE00F93525 /* UserDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ABE75221570FE00F93525 /* UserDetailsRouter.swift */; };
+		043ABE782215714300F93525 /* UserDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ABE772215714300F93525 /* UserDetailsPresenter.swift */; };
+		043ABE7A2215796100F93525 /* UserDetails+PresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043ABE792215796100F93525 /* UserDetails+PresenterDelegate.swift */; };
 		42C2A4BC16CD23E41087D960 /* Pods_MVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A54A3FA098DBD54D59D44A29 /* Pods_MVP.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +44,11 @@
 		04102A1D2212D5F4006DF545 /* UsersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInteractor.swift; sourceTree = "<group>"; };
 		04102A1F2212D818006DF545 /* UserVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVCPresenter.swift; sourceTree = "<group>"; };
 		04102A212212DA05006DF545 /* UserVC + PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserVC + PresenterDelegate.swift"; sourceTree = "<group>"; };
+		043ABE6C2215606A00F93525 /* UserVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVCRouter.swift; sourceTree = "<group>"; };
+		043ABE7122156CF400F93525 /* UserDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsVC.swift; sourceTree = "<group>"; };
+		043ABE75221570FE00F93525 /* UserDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsRouter.swift; sourceTree = "<group>"; };
+		043ABE772215714300F93525 /* UserDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsPresenter.swift; sourceTree = "<group>"; };
+		043ABE792215796100F93525 /* UserDetails+PresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDetails+PresenterDelegate.swift"; sourceTree = "<group>"; };
 		60B8A69EBC3734E9BDBDC73E /* Pods-MVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-MVP/Pods-MVP.release.xcconfig"; sourceTree = "<group>"; };
 		9268FB7B7A2D780D92A54D31 /* Pods-MVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVP/Pods-MVP.debug.xcconfig"; sourceTree = "<group>"; };
 		A54A3FA098DBD54D59D44A29 /* Pods_MVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,9 +133,7 @@
 		04102A0C2212C6C9006DF545 /* Scense */ = {
 			isa = PBXGroup;
 			children = (
-				04102A1B2212D43B006DF545 /* Interactor */,
-				04102A1A2212D431006DF545 /* Presenter */,
-				04102A102212C951006DF545 /* TableVIewCells */,
+				043ABE6F22156CB100F93525 /* UsersDetails */,
 				04102A0D2212C6D8006DF545 /* Users */,
 			);
 			path = Scense;
@@ -134,9 +142,11 @@
 		04102A0D2212C6D8006DF545 /* Users */ = {
 			isa = PBXGroup;
 			children = (
-				04102A0E2212C80A006DF545 /* UserVC+Tableview.swift */,
-				041029F82212C605006DF545 /* UserVC.swift */,
-				04102A212212DA05006DF545 /* UserVC + PresenterDelegate.swift */,
+				043ABE6B2215600300F93525 /* Router */,
+				04102A1B2212D43B006DF545 /* Interactor */,
+				04102A1A2212D431006DF545 /* Presenter */,
+				04102A102212C951006DF545 /* TableVIewCells */,
+				043ABE6E22156C9600F93525 /* ViewController */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -173,6 +183,59 @@
 				04102A1D2212D5F4006DF545 /* UsersInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		043ABE6B2215600300F93525 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				043ABE6C2215606A00F93525 /* UserVCRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		043ABE6E22156C9600F93525 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04102A0E2212C80A006DF545 /* UserVC+Tableview.swift */,
+				041029F82212C605006DF545 /* UserVC.swift */,
+				04102A212212DA05006DF545 /* UserVC + PresenterDelegate.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		043ABE6F22156CB100F93525 /* UsersDetails */ = {
+			isa = PBXGroup;
+			children = (
+				043ABE742215703E00F93525 /* Presenter */,
+				043ABE732215703700F93525 /* Router */,
+				043ABE7022156CBC00F93525 /* ViewController */,
+			);
+			path = UsersDetails;
+			sourceTree = "<group>";
+		};
+		043ABE7022156CBC00F93525 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				043ABE7122156CF400F93525 /* UserDetailsVC.swift */,
+				043ABE792215796100F93525 /* UserDetails+PresenterDelegate.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		043ABE732215703700F93525 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				043ABE75221570FE00F93525 /* UserDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		043ABE742215703E00F93525 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				043ABE772215714300F93525 /* UserDetailsPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		830A6F0E4595F9D2AB0984F9 /* Frameworks */ = {
@@ -313,12 +376,17 @@
 			files = (
 				04102A202212D818006DF545 /* UserVCPresenter.swift in Sources */,
 				04102A1E2212D5F4006DF545 /* UsersInteractor.swift in Sources */,
+				043ABE6D2215606A00F93525 /* UserVCRouter.swift in Sources */,
 				04102A222212DA05006DF545 /* UserVC + PresenterDelegate.swift in Sources */,
 				04102A192212D2C5006DF545 /* Address.swift in Sources */,
+				043ABE782215714300F93525 /* UserDetailsPresenter.swift in Sources */,
 				04102A172212CC42006DF545 /* user.swift in Sources */,
+				043ABE7A2215796100F93525 /* UserDetails+PresenterDelegate.swift in Sources */,
 				041029F92212C605006DF545 /* UserVC.swift in Sources */,
 				04102A0F2212C80A006DF545 /* UserVC+Tableview.swift in Sources */,
+				043ABE76221570FE00F93525 /* UserDetailsRouter.swift in Sources */,
 				041029F72212C605006DF545 /* AppDelegate.swift in Sources */,
+				043ABE7222156CF400F93525 /* UserDetailsVC.swift in Sources */,
 				04102A132212C975006DF545 /* UserVCCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,10 +26,10 @@ extension UserVC:UsersView{
         print(error)
     }
     
-    
-    func navigateToUserDetails(user: user) {
-       // navigationController?.pushViewController(UIViewController(), animated: true)
-    }
+    // before router
+//    func navigateToUserDetails(user: user) {
+//       // navigationController?.pushViewController(UIViewController(), animated: true)
+//    }
     
     
 }
